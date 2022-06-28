@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
 import { auth } from "../firebase";
 
 const SignUp = () => {
@@ -10,22 +6,21 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   // creation d'un utilisateur
-  const register = async (e) => {
+  const register = (e) => {
     e.preventDefault();
     try {
-      const user = createUserWithEmailAndPassword(auth, email, password);
-      console.log(user);
+      auth.createUserWithEmailAndPassword(email, password);
     } catch (error) {
       console.log(error.message);
+      alert(error.message);
     }
   };
 
   // connection d'un utilisateur
-  const signIn = async (e) => {
+  const signIn = (e) => {
     e.preventDefault();
     try {
-      const user = await signInWithEmailAndPassword(auth, email, password);
-      console.log(user);
+      auth.signInWithEmailAndPassword(email, password);
     } catch (error) {
       console.log(error.message);
       alert(error.message);
@@ -42,7 +37,7 @@ const SignUp = () => {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
-          className=" p-3 outline-none h-10  mb-4 rounded border-none max-w-2xl "
+          className=" p-3 outline-none h-10  mb-4 rounded border-none max-w-2xl text-black "
         />
         <input
           type="password"
@@ -50,7 +45,7 @@ const SignUp = () => {
           onChange={(e) => {
             setPassword(e.target.value);
           }}
-          className=" p-3 outline-none h-10   rounded border-none max-w-2xl "
+          className=" p-3 outline-none h-10  text-black  rounded border-none max-w-2xl "
         />
         <button
           className=" p-2 text-base rounded bg-[#e50914] h-12 font-semibold mt-6"
