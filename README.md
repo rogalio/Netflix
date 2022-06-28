@@ -9,5 +9,5 @@ techno utilisées ;
 
  `REACT`
  `REDUX`
- `FIREBASE (auth & firestore & stripe`
+ `FIREBASE (auth & firestore & stripe & host)`
 
