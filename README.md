@@ -1,8 +1,6 @@
-# Getting Started with Create React App and Redux
+site web : 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
-## Available Scripts
+` https://netflix-firebase-e06b7.web.app/ `
 
 
 techno utilisées ;
@@ -11,3 +9,8 @@ techno utilisées ;
  `REDUX`
  `FIREBASE (auth & firestore & stripe & host)`
 
+
+
+![image](https://user-images.githubusercontent.com/96726858/178146023-c277323d-2588-4128-bad4-e4ea6291b50b.png)
+
+![image](https://user-images.githubusercontent.com/96726858/178146033-cdba954d-a369-49e6-ac81-ceaa19e75309.png)
